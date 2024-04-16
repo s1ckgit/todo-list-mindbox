@@ -1,0 +1,22 @@
+{
+  "extends": [
+  "next/core-web-vitals", 
+  "eslint:recommended",
+  "plugin:@typescript-eslint/recommended",
+  "plugin:react/recommended",
+  "plugin:react-hooks/recommended",
+  "plugin:react/jsx-runtime"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "react"],
+  "rules": {
+    "@typescript-eslint/comma-dangle": ["error", "only-multiline"],
+    "@typescript-eslint/semi": ["error", "always"],
+    "object-curly-spacing": ["error", "always"]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
