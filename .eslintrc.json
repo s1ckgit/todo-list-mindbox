@@ -12,7 +12,8 @@
   "rules": {
     "@typescript-eslint/comma-dangle": ["error", "only-multiline"],
     "@typescript-eslint/semi": ["error", "always"],
-    "object-curly-spacing": ["error", "always"]
+    "object-curly-spacing": ["error", "always"],
+    "react-hooks/exhaustive-deps": ["off"]
   },
   "settings": {
     "react": {

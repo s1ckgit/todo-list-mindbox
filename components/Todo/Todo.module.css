@@ -1,0 +1,49 @@
+.todo {
+  display: flex;
+  column-gap: 1rem;
+
+  padding: 14px 10px;
+
+  border-bottom: 1px solid rgb(192, 192, 192);
+}
+
+.name {
+  font-weight: normal;
+  transition: color .3s, text-decoration .3s;
+}
+
+.active {
+  background-color: transparent;
+
+  border: .5px solid rgb(192, 192, 192);
+  border-radius: 100%;
+
+  width: 30px;
+
+  cursor: pointer;
+
+  transition: background-color .3s;
+}
+
+.active:hover,
+.completed:hover {
+  background-color: rgba(67, 119, 230, 0.1);
+}
+
+.completed {
+  background: url('../../public/check.svg') center center/cover no-repeat;
+
+  border: .5px solid rgba(67, 119, 230, 0.5);
+  border-radius: 100%;
+
+  width: 30px;
+
+  cursor: pointer;
+
+  transition: background-color .3s;
+}
+
+.completedTodo {
+  color: rgb(192, 192, 192);
+  text-decoration: line-through;
+}
