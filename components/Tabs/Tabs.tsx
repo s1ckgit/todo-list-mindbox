@@ -17,18 +17,31 @@ const Tabs = ({
   setTodos
 }: TabsProps) => {
 
+  const itemsLeft = Array.from(todos.values()).filter((value) => value === 'active').length;
+
+  const onClear = () => {
+    setTodos((map) => {
+      const arr = Array.from(map).filter((todo) => todo[1] === 'active');
+      return new Map(arr);
+    });
+  };
+
   return (
     <T.Root defaultValue='all' className={styles.root}>
         <T.List className={styles.list}>
-          <T.Trigger className={styles.trigger} value='all'>
-            All
-          </T.Trigger>
-          <T.Trigger className={styles.trigger} value='active'>
-            Active
-          </T.Trigger>
-          <T.Trigger className={styles.trigger} value='completed'>
-            Completed
-          </T.Trigger>
+          <div className={styles.triggers}>
+            <T.Trigger className={styles.trigger} value='all'>
+              All
+            </T.Trigger>
+            <T.Trigger className={styles.trigger} value='active'>
+              Active
+            </T.Trigger>
+            <T.Trigger className={styles.trigger} value='completed'>
+              Completed
+            </T.Trigger>
+          </div>
+          <button onClick={onClear} className={styles.clear}>Clear completed</button>
+          <p className={styles.left}>{itemsLeft} items left</p>
         </T.List>
         <T.Content className={styles.content} value='all'>
           <ul className={styles.ul}>

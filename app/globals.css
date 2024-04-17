@@ -1,3 +1,7 @@
+:root {
+  --ghost-color: rgb(192, 192, 192);
+}
+
 html {
   color: #352424;
   background-color: rgb(212, 212, 212);
@@ -15,10 +19,5 @@ html {
    box-sizing: border-box;
    padding: 0;
    margin: 0;
- }
- 
- .container {
-   max-width: 1165px;
-   margin: 0 auto;
  }
  

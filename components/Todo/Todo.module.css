@@ -4,7 +4,7 @@
 
   padding: 14px 10px;
 
-  border-bottom: 1px solid rgb(192, 192, 192);
+  border-bottom: 1px solid var(--ghost-color);
 }
 
 .name {
@@ -15,7 +15,7 @@
 .active {
   background-color: transparent;
 
-  border: .5px solid rgb(192, 192, 192);
+  border: .5px solid var(--ghost-color);
   border-radius: 100%;
 
   width: 30px;
@@ -44,6 +44,6 @@
 }
 
 .completedTodo {
-  color: rgb(192, 192, 192);
+  color: var(--ghost-color);
   text-decoration: line-through;
 }
